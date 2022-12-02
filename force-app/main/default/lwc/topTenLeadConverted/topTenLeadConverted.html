@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Top 10 Leads Convertidos Como Perdidos" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                    key-field="id"
+                    data={leads}
+                    columns={columns}
+                    hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

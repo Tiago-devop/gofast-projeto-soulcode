@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Número de Leads por estado" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            
+            <lightning-datatable 
+                    key-field="id"
+                    data={leads}
+                    columns={columns}
+                    hide-checkbox-column>
+            </lightning-datatable>
+
+        </div> 
+    </lightning-card>
+</template>

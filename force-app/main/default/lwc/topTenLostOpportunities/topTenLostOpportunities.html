@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Top 10 Oportunidades Perdidas" icon-name="standard:opportunity">
+        <div class="slds-m-around_medium">
+            <lightning-datatable
+                    key-field="id"
+                    data={opportunities}
+                    columns={columns}
+                    hide-checkbox-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

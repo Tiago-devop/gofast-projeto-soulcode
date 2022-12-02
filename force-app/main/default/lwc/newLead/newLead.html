@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Novo Lead" icon-name="standard:lead">
+        <div class="slds-m-around_medium">
+            <lightning-record-edit-form object-api-name="Lead" onsuccess={handleSuccess}>
+                <p>
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Phone"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="CNPJ__c"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Email"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Company"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="regiao__c"></lightning-input-field>
+                </p>
+                <p>
+                    <lightning-input-field field-name="Status"></lightning-input-field>
+                </p>
+                <div class="botao">
+                    <lightning-button label="Cancel" onclick={handleReset}></lightning-button>
+                    <lightning-button label="Criar Conta" type="submit" variant="brand"></lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+
+</template>

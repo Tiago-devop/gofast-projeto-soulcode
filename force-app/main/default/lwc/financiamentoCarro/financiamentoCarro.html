@@ -1,0 +1,30 @@
+<template>
+	<lightning-card title="Financiamento de Carro" icon-name="custom:custom31">
+		<div class="slds-m-around_medium">
+			<div class="inputsFields">
+				<lightning-input type="number" name="carro" label="Valor Carro" step=".01">
+				</lightning-input>
+				<lightning-input type="number" name="entrada" label="Entrada" step=".01">
+				</lightning-input>
+				<lightning-input class="ultimo" type="number" name="parcelas" label="Parcelas">
+				</lightning-input>
+				<lightning-button  variant="brand" label="Calcular Financiamento"
+					onclick={handleClickfinanciarAutomovel}>
+				</lightning-button>
+				<template if:true={visivel}>
+					<lightning-button class="botao" label="Resetar" onclick={handleReset}>
+					</lightning-button>
+				</template>
+			</div>
+		</div>
+		<template if:true={visivel}>
+			<div class="slds-m-around_medium">
+				<p>Valor Financiado: R$ {financiamento}</p>
+				<p>Valor do Juros: R$ {taxa}</p>
+				<p>Total de parcelas: {parcelas}</p>
+				<p>Valor da Parcela: R$ {valorParcela}</p>
+				<p>Valor total do carro: R$ {valorTotalCarro}</p>
+			</div>
+		</template>
+	</lightning-card>
+</template>
